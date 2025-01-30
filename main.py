@@ -44,3 +44,9 @@ def predict_qa(request: QARequest):
             return {"error": "No valid answer found"}
     except Exception as e:
         return {"error": str(e)}
+
+
+if __name__ == "__main__":
+    import uvicorn
+
+    uvicorn.run(app)
